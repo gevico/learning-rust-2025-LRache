@@ -4,10 +4,10 @@
 // hint.
 fn main() {
     let mut res = 42;
-    let option = 12;
-    // for x in option {
-    //     res += x;
-    // }
-    res += option;
+    let option = Some(12);
+    while let Some(x) = option {
+        res += x;
+    }
+    // res += option;
     println!("{}", res);
 }
